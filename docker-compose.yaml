@@ -21,8 +21,8 @@ services:
       - "5380:8080"
       - "53:53"
     environment:
-      - HTTP_USER=foo
-      - HTTP_PASS=bar
+      - HTTP_USER=admin
+      - HTTP_PASS=adminadmin
     volumes:
       - ./dnsmasq.conf:/etc/dnsmasq.conf
     restart: always
