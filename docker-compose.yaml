@@ -28,7 +28,7 @@ services:
     restart: always
     healthcheck:
       test: ["CMD-SHELL", " curl -sSf -u $$HTTP_USER:$$HTTP_PASS http://localhost:8080 "]
-      interval: 60s
+      interval: 1s
       timeout: 5s
       retries: 3
     networks:
