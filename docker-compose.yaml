@@ -27,7 +27,7 @@ services:
       - ./dnsmasq.conf:/etc/dnsmasq.conf
     restart: always
     healthcheck:
-      test: ["CMD-SHELL", " curl -s --fail -I -u $$HTTP_USER:$$HTTP_PASS http://localhost:8080 "]
+      test: ["CMD-SHELL", " curl -sSf -u $$HTTP_USER:$$HTTP_PASS http://localhost:8080 "]
       interval: 60s
       timeout: 5s
       retries: 3
